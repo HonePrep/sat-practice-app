@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+/* Scrollbar styling */
+.passage-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.passage-scroll::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+.passage-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Choice options */
+.choice-option {
+  @apply border-2 border-gray-200 rounded-lg p-4 cursor-pointer transition-all duration-150 relative;
+}
+.choice-option:hover:not(.selected):not(.disabled):not(.crossed-out) {
+  @apply border-lucas-500 bg-lucas-50;
+}
+.choice-option.selected {
+  @apply border-lucas-500 bg-lucas-50;
+}
+.choice-option.correct {
+  @apply border-sat-correct bg-green-50;
+}
+.choice-option.incorrect {
+  @apply border-sat-incorrect bg-red-50;
+}
+.choice-option.crossed-out {
+  @apply opacity-50 line-through bg-gray-50;
+}
+.choice-option.disabled {
+  @apply cursor-default;
+}
+
+/* Cross-out button */
+.cross-out-btn {
+  @apply absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs font-bold text-gray-600;
+}
+
+/* Question navigator pills */
+.nav-pill {
+  @apply w-9 h-9 rounded-md flex items-center justify-center text-sm font-medium transition-all cursor-pointer border-2;
+}
+.nav-pill.unanswered {
+  @apply bg-white border-gray-300 text-gray-600 hover:border-lucas-400;
+}
+.nav-pill.answered {
+  @apply bg-lucas-500 border-lucas-500 text-white;
+}
+.nav-pill.marked {
+  @apply bg-sat-marked border-sat-marked text-white;
+}
+.nav-pill.current {
+  @apply ring-2 ring-lucas-400 ring-offset-2;
+}
+
+/* Timer */
+.timer-display {
+  @apply font-mono text-xl font-bold;
+}
+.timer-display.warning {
+  @apply text-sat-marked;
+}
+.timer-display.danger {
+  @apply text-sat-incorrect animate-pulse;
+}
+
+/* Lucas AI style sidebar */
+.lucas-sidebar {
+  @apply fixed left-0 top-0 h-full w-64 bg-gradient-to-b from-lucas-50 to-white border-r border-lucas-100 z-40;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+}
+
+/* Navigation modal overlay */
+.nav-modal-overlay {
+  @apply fixed inset-0 bg-black/50 z-50 flex items-center justify-center;
+}
+.nav-modal {
+  @apply bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 max-h-[80vh] overflow-hidden;
+}

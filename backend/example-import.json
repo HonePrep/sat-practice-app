@@ -1,0 +1,78 @@
+{
+  "title": "Example Import Test",
+  "description": "This is an example test that demonstrates the JSON import format",
+  "difficulty": "Medium",
+  "totalTimeSeconds": 1200,
+  "sections": [
+    {
+      "name": "Reading and Writing",
+      "order": 0,
+      "timeLimitSeconds": 600,
+      "questions": [
+        {
+          "order": 0,
+          "passageText": "This is where the passage text goes. It can be multiple paragraphs and should contain the content that questions will reference.\n\nSecond paragraph of the passage would go here.",
+          "prompt": "What is the main idea of the passage?",
+          "explanation": "The explanation that will be shown after the test. Explain why the correct answer is correct and why other options are incorrect.",
+          "difficulty": "Medium",
+          "tags": ["reading", "main-idea"],
+          "choices": [
+            { "label": "A", "text": "First option text", "isCorrect": false },
+            { "label": "B", "text": "Second option text (correct answer)", "isCorrect": true },
+            { "label": "C", "text": "Third option text", "isCorrect": false },
+            { "label": "D", "text": "Fourth option text", "isCorrect": false }
+          ]
+        },
+        {
+          "order": 1,
+          "passageText": null,
+          "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nThe researchers _______ their findings at the conference last week.",
+          "explanation": "Past tense is required here because the action occurred 'last week'. 'Presented' is the correct past tense form.",
+          "difficulty": "Easy",
+          "tags": ["writing", "grammar", "verb-tense"],
+          "choices": [
+            { "label": "A", "text": "present", "isCorrect": false },
+            { "label": "B", "text": "presents", "isCorrect": false },
+            { "label": "C", "text": "presented", "isCorrect": true },
+            { "label": "D", "text": "will present", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "order": 1,
+      "timeLimitSeconds": 600,
+      "questions": [
+        {
+          "order": 0,
+          "passageText": null,
+          "prompt": "If x + 5 = 12, what is the value of 2x?",
+          "explanation": "Solving x + 5 = 12: subtract 5 from both sides to get x = 7. Then 2x = 2(7) = 14.",
+          "difficulty": "Easy",
+          "tags": ["math", "algebra", "linear-equations"],
+          "choices": [
+            { "label": "A", "text": "7", "isCorrect": false },
+            { "label": "B", "text": "10", "isCorrect": false },
+            { "label": "C", "text": "14", "isCorrect": true },
+            { "label": "D", "text": "24", "isCorrect": false }
+          ]
+        },
+        {
+          "order": 1,
+          "passageText": "A store sells notebooks for $3 each and pens for $1.50 each. Maria bought some notebooks and pens and spent exactly $15.",
+          "prompt": "If Maria bought 3 notebooks, how many pens did she buy?",
+          "explanation": "3 notebooks cost 3 × $3 = $9. Remaining amount: $15 - $9 = $6. Number of pens: $6 ÷ $1.50 = 4 pens.",
+          "difficulty": "Medium",
+          "tags": ["math", "algebra", "word-problems"],
+          "choices": [
+            { "label": "A", "text": "2", "isCorrect": false },
+            { "label": "B", "text": "3", "isCorrect": false },
+            { "label": "C", "text": "4", "isCorrect": true },
+            { "label": "D", "text": "6", "isCorrect": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
